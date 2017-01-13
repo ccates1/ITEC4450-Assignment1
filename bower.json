@@ -1,0 +1,12 @@
+{
+  "name": "assignment 1",
+  "version": "1.0.0",
+  "authors": [
+    "Christopher Cates"
+  ],
+  "description": "Assignment #1: Web Development",
+  "dependencies": {
+    "handlebars": "~3.0.3",
+    "MDBootstrap": "4.2.0"
+  }
+}

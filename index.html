@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Assignment #1</title>
+  <link rel="stylesheet" href="lib/MDBootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="lib/MDBootstrap/css/mdb.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="lib/bootstrap-social/bootstrap-social.css">
+  <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" href="lib/toastr/toastr.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-dark bg-primary">
+      <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapseEx2"> <i class="ion-navicon-round"></i> </button>
+      <div class="container">
+        <div class="collapse navbar-toggleable-xs" id="collapseEx2"> <a class="navbar-brand" href="javascript:void(0)">Assignment #1</a>
+          <ul class="nav navbar-nav">
+            <li class="nav-item"> <a class="nav-link" href="#home">Home</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="#about">About</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="#contact">Contact</a> </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div id="page-container"></div>
+  </main>
+  <footer class="page-footer center-on-small-only primary-color-dark">
+    <div class="container-fluid">
+      <div class="footer-text">Web Development Section 01 Spring 2017</div>
+    </div>
+  </footer>
+</body>
+<script id="home-page-template" type="text/x-handlebars-template">
+  <div id="home-page" class="page active">
+    <div class="container">
+      <div class="card">
+        <div class="card-header bg-primary white-text"> Resume </div>
+        <div class="card-block">
+          <div class="row display-table">
+            <div class="col-lg-12">
+              <div class="col-sm-4 display-cell">
+                <figure> <img class="rounded-circle img-fluid" alt="" src="images/me.jpg"> </figure>
+              </div>
+              <div class="col-sm-8 display-cell">
+                <div class="list-group">
+                  <div class="list-group-item list-group-item-action active">Basic Information</div>
+                  <div class="list-group-item">
+                    <div class="item-icon-left"> <i class="icon ion-person"></i> Christopher Cody Cates </div>
+                  </div>
+                  <div class="list-group-item">
+                    <div class="item-icon-left"> <i class="icon ion-university"></i> Student at Georgia Gwinnett College </div>
+                  </div>
+                  <div class="list-group-item">
+                    <div class="item-icon-left"> <i class="icon ion-at"></i> ccates1@ggc.edu </div>
+                  </div>
+                  <div class="list-group-item">
+                    <div class="item-icon-left"> <i class="icon ion-ios-telephone"></i> 470.426.9923 </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-primary">
+            <div class="row" style="padding-bottom: 8px;">
+              <div class="col-sm-12">
+                <h4>Work Experience</h4>
+                <div style="border-bottom:1px solid #ccc;"></div>
+              </div>
+            </div>
+            <div class="list-group work-list">
+              <div class="list-group-item list-group-item-action active">Del Ray Plants, Corp.</div>
+              <div class="list-group-item">
+                <div class="item-icon-left head"> <i class="icon ion-information-circled"></i> Retail Merchandiser, Servicer | April (2014) – Present | Atlanta, GA </div>
+              </div>
+              <div class="list-group-item">
+                <div class="item-icon-left"> <i class="icon ion-clipboard"></i> Merchandise Home Depot’s greenhouses in compliance with company standards </div>
+              </div>
+              <div class="list-group-item">
+                <div class="item-icon-left"> <i class="icon ion-clipboard"></i> Prioritize and manage time between greenhouses within the district </div>
+              </div>
+              <div class="list-group-item">
+                <div class="item-icon-left"> <i class="icon ion-clipboard"></i> Order and continuously update plant inventory </div>
+              </div>
+              <div class="list-group-item">
+                <div class="item-icon-left"> <i class="icon ion-clipboard"></i> Review inventory dashboards and sales statistics </div>
+              </div>
+            </div>
+            <div class="list-group">
+              <div class="list-group-item list-group-item-action active">St. Ives Country Club</div>
+              <div class="list-group-item">
+                <div class="item-icon-left head"> <i class="icon ion-information-circled"></i> Expeditor, Waiter | May (2011) – April (2013) | Johns Creek, GA </div>
+              </div>
+              <div class="list-group-item">
+                <div class="item-icon-left"> <i class="icon ion-clipboard"></i> Manage and organize customer orders efficiently while maintaining business etiquette </div>
+              </div>
+              <div class="list-group-item">
+                <div class="item-icon-left"> <i class="icon ion-clipboard"></i> Communicate and interact with managers, coworkers, and customers on a daily basis </div>
+              </div>
+              <div class="list-group-item">
+                <div class="item-icon-left"> <i class="icon ion-clipboard"></i> Provide exceptional customer services and develop clientele </div>
+              </div>
+              <div class="list-group-item">
+                <div class="item-icon-left"> <i class="icon ion-clipboard"></i> Prepare and participate in company events such as banquets, customer parties, holiday events, etc. </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-primary">
+            <div class="row" style="padding-bottom: 8px;">
+              <div class="col-sm-12">
+                <h4>Education</h4>
+                <div style="border-bottom:1px solid #ccc;"></div>
+              </div>
+            </div>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>School</th>
+                  <th>Degree</th>
+                  <th>Graduation Year</th>
+                  <th>GPA</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Peachtree Ridge High School</td>
+                  <td>High School Diploma</td>
+                  <td>2011</td>
+                  <td>3.54</td>
+                </tr>
+                <tr>
+                  <td>Georgia Gwinnett College</td>
+                  <td>Bachelors Degree</td>
+                  <td>2017</td>
+                  <td>3.65</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="panel panel-primary">
+            <div class="row" style="padding-bottom: 8px;">
+              <div class="col-sm-12">
+                <h4>Skills and Endorsements</h4>
+                <div style="border-bottom:1px solid #ccc;"></div>
+              </div>
+            </div>
+            <p>JavaScript, Java (OOP), NodeJS, Angular, Ionic, MongoDB, MySQL, Web Development, Mobile Application Development (iOS, Android), MEAN Stack/Full Stack Development, WordPress, Rational Rose Enterprise Edition, Microsoft Office, Visual Merchandising</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</script>
+<script id="aboutMe-page-template" type="text/x-handlebars-template">
+  <div id="about-page" class="page">
+    <div class="container">
+      <div class="card">
+        <div class="card-header bg-primary white-text"> Hobbies, Interests, and Favorite Activities </div>
+        <div class="card-block">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="list-group">
+                <div class="list-group-item">
+                  <div class="item-icon-left"> <img class="icon" src="images/beach.ico"> Going to the Beach </div>
+                </div>
+                <div class="list-group-item">
+                  <div class="item-icon-left"> <img class="icon" src="images/money.ico"> Daily Fantasy Sports </div>
+                </div>
+                <div class="list-group-item">
+                  <div class="item-icon-left"> <img class="icon" src="images/baseball.ico"> Baseball </div>
+                </div>
+                <div class="list-group-item">
+                  <div class="item-icon-left"> <img class="icon" src="images/basketball.ico"> Basketball </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="list-group">
+                <div class="list-group-item">
+                  <div class="item-icon-left"> <img class="icon" src="images/code.ico"> Software Development </div>
+                </div>
+                <div class="list-group-item">
+                  <div class="item-icon-left"> <img class="icon" src="images/football.ico"> Football </div>
+                </div>
+                <div class="list-group-item">
+                  <div class="item-icon-left"> <img class="icon" src="images/videogames.ico"> Video Games </div>
+                </div>
+                <div class="list-group-item">
+                  <div class="item-icon-left"> <img class="icon" src="images/android.ico"> Mobile Applications </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header bg-primary white-text"> Friends & Family Life </div>
+        <div class="card-block">
+          <div class="row-fluid">
+            <div class="col-sm-4" align="center"> <img class="img-thumbnail rounded " src="images/fam.jpg"> </div>
+            <div class="col-sm-4" align="center"> <img class="img-thumbnail rounded" src="images/fam2.jpg"> </div>
+            <div class="col-sm-4" align="center"> <img class="img-thumbnail rounded" src="images/wedding.jpg"> </div>
+          </div>
+        </div>
+        <div class="card-block">
+          <div class="panel panel-primary">
+            <div class="row" style="padding-bottom: 8px;">
+              <div class="col-sm-12">
+                <h4>Family</h4>
+                <div style="border-bottom:1px solid #ccc;"></div>
+              </div>
+            </div>
+            <p>I was born in Pensacola, Florida on July 27th 1993. I have a total of five sisters and we all moved to Atlanta, Georgia in 2000.</p>
+          </div>
+        </div>
+        <div class="card-block">
+          <div class="row-fluid">
+            <div class="col-sm-4" align="center"> <img class="img-thumbnail rounded" src="images/wedding-group.jpg"> </div>
+            <div class="col-sm-4" align="center"> <img class="img-thumbnail rounded" src="images/zipline.jpg"> </div>
+            <div class="col-sm-4" align="canter"> <img class="img-thumbnail rounded" src="images/christmas.jpg"> </div>
+          </div>
+        </div>
+        <div class="card-block">
+          <div class="panel panel-primary">
+            <div class="row" style="padding-bottom: 8px;">
+              <div class="col-sm-12">
+                <h4>Friends</h4>
+                <div style="border-bottom:1px solid #ccc;"></div>
+              </div>
+            </div>
+            <p>My girlfriend's name is Karina and we have been together since May 20th, 2014. My best friends are Cody and Christian, who are both also current students GGC.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-block">
+          <h1 class="display-4">Video: </h1>
+          <div style="border-bottom:1px solid #ccc;"></div>
+          <div class="spacer"></div>
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/NuG3D4Tr114" frameborder="0" allowfullscreen alt="Source: https://www.youtube.com/watch?v=NuG3D4Tr114"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+</script>
+<script id="contactMe-page-template" type="text/x-handlebars-template">
+  <div id="contact-page" class="page">
+    <div class="container">
+      <div class="card" id="form-elements">
+        <form name="request-form" onsubmit="return validateForm()" method="post">
+          <div class="card-header bg-primary white-text"> Website/Mobile Application Development Request Form </div>
+          <div class="card-block">
+            <div class="md-form"> <i class="ion-at prefix"></i>
+              <input type="text" class="form-control" id="email" name="email">
+              <label for="email">Email</label>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="md-form"> <i class="ion-person prefix"></i>
+                  <input type="text" class="form-control" id="firstname" name="firstname">
+                  <label for="firstname">First Name</label>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="md-form">
+                  <input type="text" class="form-control" id="lastname" name="lastname">
+                  <label for="lastname">Last Name</label>
+                </div>
+              </div>
+            </div>
+            <div class="md-form"> <i class="fa fa-pencil prefix"></i>
+              <textarea type="text" class="md-textarea" id="comments"></textarea>
+              <label for="comments">Enter a breif description of what you are requesting.</label>
+            </div>
+            <div class="panel panel-primary">
+              <div class="row" style="padding-bottom: 10px;">
+                <div class="col-sm-12">
+                  <h4>Which of the following options is the requested application for?</h4>
+                  <div style="border-bottom:1px solid #ccc;"></div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="container text-center">
+                  <div class="col-sm-6">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="radio-selection" value="personal">
+                        <h3 class="head">Business</h3> </label>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="radio-selection" value="business">
+                        <h3 class="head">Other</h3> </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button type="submit" value="Submit" class="btn btn-outline-primary btn-lg btn-block" id="submit-btn" align="center">
+              <h3 class="head">Submit</h3> </button>
+          </div>
+        </form>
+      </div>
+      <div class="list-group">
+        <div class="list-group-item list-group-item-action active"> Social Accounts </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="list-group">
+              <div class="list-group-item">
+                <a href="https://github.com/ccates1" target="_blank" class="btn btn-block btn-social btn-github"> <span class="fa fa-github"></span> Github </a>
+              </div>
+              <div class="list-group-item">
+                <a href="https://www.linkedin.com/in/christopher-cates-5b8790102?trk=nav_responsive_tab_profile" target="_blank" class="btn btn-block btn-social btn-linkedin"> <span class="fa fa-linkedin"></span> LinkedIn </a>
+              </div>
+              <div class="list-group-item">
+                <a href="mailto:ccates1@ggc.edu?" target="_top" class="btn btn-block btn-social btn-openid"> <i class="ion-at"></i> Email </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="list-group">
+              <div class="list-group-item">
+                <a href="mailto:ccates3@yahoo.com?" target="_top" class="btn btn-block btn-social btn-yahoo"> <span class="fa fa-yahoo"></span> Yahoo! </a>
+              </div>
+              <div class="list-group-item">
+                <a href="mailto:christophercates01@gmail.com?" target="_top" class="btn btn-block btn-social btn-google"> <span class="fa fa-google"></span> Gmail </a>
+              </div>
+              <div class="list-group-item">
+                <a href="https://www.facebook.com/cody.cates.79" target="_blank" class="btn btn-block btn-social btn-facebook"> <i class="fa fa-facebook"></i> Facebook </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</script>
+<script src="lib/MDBootstrap/js/jquery-2.2.3.js" type="text/javascript"></script>
+<script src="lib/MDBootstrap/js/tether.js" type="text/javascript"></script>
+<script src="lib/MDBootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="lib/MDBootstrap/js/mdb.min.js" type="text/javascript"></script>
+<script src="lib/handlebars/handlebars.min.js" type="text/javascript"></script>
+<script src="lib/toastr/toastr.js" type="text/javascript"></script>
+<script src="js/app.js" type="text/javascript"></script>
+
+</html>
